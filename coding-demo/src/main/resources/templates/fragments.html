@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http:/>/www.thymeleaf.org/">
-<head th:fragment="head">
+<head>
     <meta charset="UTF-8"/>
-    <title>Coding Events</title>
-    <link rel="stylesheet" th:href="@{/styles.css}">
-    <script th:src="@{/script.js}"></script>
+    <title></title>
+
 </head>
 <body>
 
-<nav th:fragment="header">
-    <h1 th:text="${title}">Coding Events</h1>
+<nav th:fragment="navigation">
     <ul>
-        <li><a href="events">All Events</a></li>
+        <li><a href="/events">All Events</a></li>
+        <li><a href="/>events/create">Create Event</a></li>
     </ul>
 </nav>
+
 </body>
 </html>
