@@ -16,13 +16,15 @@ public class EventController {
     private static List<String> events = new ArrayList<>();
     @GetMapping
     public String displayAllEvents(Model model){
+        model.addAttribute("title", "All Events");
         model.addAttribute("events", events);
           return "events/index";
     }
 
     //lives at /events/create
     @GetMapping("create")
-    public String displayCreateEventForm(){
+    public String displayCreateEventForm(Model model){
+        model.addAttribute ("title", "Create Event");
         return "events/create";
     }
 
