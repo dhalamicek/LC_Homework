@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head th:replace="fragments :: head"></head>
+<head th:replace="~{fragments :: head}"></head>
 <body class="container">
 
-<header th:replace="fragments :: header"></header>
+<header th:replace="~{fragments :: header}"></header>
 
 <table class="table table-striped">
     <thead>
@@ -11,11 +11,10 @@
         <th>Name</th>
     </tr>
     </thead>
-        <tr th:each="event : ${events}">
-            <td th:text="${event}"></td>
-        </tr>
-    </table>
-
+    <tr th:each="event : ${events}">
+        <td th:text="${event.name}"></td>
+    </tr>
+</table>
 
 </body>
 </html>
