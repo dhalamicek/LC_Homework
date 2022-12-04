@@ -27,7 +27,6 @@ public class Event {
    @NotBlank(message = "Email is a required field.")
    @Email(message = "Invalid email. Try again.")
     private String contactEmail;
-
    private EventType type;
     public Event(String name, String description, String contactEmail, EventType type) {
         this.name = name;
